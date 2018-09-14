@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ticktick.apiplatform.mapper.ApiMapper">
+
+
+  <select id="selectByParam" resultType="com.ticktick.apiplatform.entity.ApiEntity">
+    SELECT a.* FROM apis a LEFT JOIN projects p ON a.project_id=p.id LEFT JOIN groups g ON
+    a.group_id=g.id
+    <where>
+      a.deleted = 0 AND a.is_case=1 AND (run_once=0 OR (run_once=1 AND run_count=0) )
+      <if test="projectName != null">
+        AND p.name = #{projectName}
+      </if>
+      <if test="groupName != null">
+        AND g.name = #{groupName}
+      </if>
+      <if test="apiName != null">
+        AND a.name = #{apiName}
+      </if>
+
+    </where>
+    ORDER BY a.test_order
+  </select>
+</mapper>

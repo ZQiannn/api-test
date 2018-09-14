@@ -1,0 +1,17 @@
+{
+  "db": {
+    "host": "localhost",
+    "port": "3306",
+    "database": "api-platform",
+    "username": "root",
+    "password": "567711"
+  },
+  "mail": {
+    "host": "smtp.126.com",
+    "port": "465",
+    "username": "qw5473816@126.com",
+    "password": "5473816",
+    "useSSL": true,
+    "useTLS": false
+  }
+}
