@@ -15,12 +15,21 @@ import tk.mybatis.mapper.annotation.KeySql;
 @Table(name = "groups")
 public class GroupEntity {
 
+    /**
+     * 自增主键
+     */
     @Id
     @KeySql(useGeneratedKeys = true)
     private Long id;
 
+    /**
+     * 组名称
+     */
     private String name;
 
+    /**
+     * 关联的ProjectId
+     */
     private Long projectId;
 
 }

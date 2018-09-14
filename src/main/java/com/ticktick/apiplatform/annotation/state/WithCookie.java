@@ -13,6 +13,7 @@ import org.springframework.core.annotation.AliasFor;
 @Documented
 public @interface WithCookie {
 
+    //需要带上缓存中的cookieKey
     @AliasFor("value")
     String withKey();
 

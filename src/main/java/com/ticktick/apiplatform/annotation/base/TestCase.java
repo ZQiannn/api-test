@@ -16,9 +16,12 @@ import java.lang.annotation.Target;
 @Documented
 public @interface TestCase {
 
+    //优先级
     PriorityLevel level() default PriorityLevel.LOW;
 
+    //顺序
     int order() default 100;
 
+    //是否只运行一次
     boolean runOnce() default false;
 }

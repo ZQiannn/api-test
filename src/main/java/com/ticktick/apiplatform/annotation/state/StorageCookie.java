@@ -11,8 +11,10 @@ import java.lang.annotation.Target;
 @Documented
 public @interface StorageCookie {
 
+    //要保存的cookie名，不输默认保存全部
     String[] cookieNames() default {};
 
+    //存在缓存中的key
     String storeKey();
 
 }

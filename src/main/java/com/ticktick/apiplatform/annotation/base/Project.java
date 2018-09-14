@@ -17,7 +17,9 @@ import java.lang.annotation.Target;
 @Documented
 public @interface Project {
 
+    //Project名称
     String name() default StringConstant.DEFAULT;
 
+    //基础Url例如域名
     String baseUrl() default "";
 }

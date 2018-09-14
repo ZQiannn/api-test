@@ -16,6 +16,7 @@ import java.lang.annotation.Target;
 @Documented
 public @interface Group {
 
+    //组的名称
     String name() default StringConstant.DEFAULT;
 
 }

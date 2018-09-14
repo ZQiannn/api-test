@@ -2,7 +2,6 @@ package com.ticktick.apiplatform.service.impl;
 
 import com.ticktick.apiplatform.entity.ResultEntity;
 import com.ticktick.apiplatform.service.EmailService;
-import freemarker.template.Template;
 import java.util.List;
 import javax.mail.MessagingException;
 import javax.mail.internet.InternetAddress;
@@ -26,8 +25,8 @@ public class EmailServiceImpl implements EmailService {
     @Autowired
     private JavaMailSender mailSender;
 
-    @Autowired
-    private Template templateEngine;
+//    @Autowired
+//    private Template templateEngine;
 
 
     @Value("${mail.username}")

@@ -16,13 +16,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Documented
 public @interface Api {
 
+    //API的相对URL
     String url();
 
+    //ContentType
     String contentType() default "application/json";
 
+    //Accept
     String accept() default "application/json";
 
+    //API名称
     String name();
 
+    //请求方法
     RequestMethod method();
 }

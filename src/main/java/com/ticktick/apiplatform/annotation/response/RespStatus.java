@@ -16,6 +16,7 @@ import org.springframework.http.HttpStatus;
 @Documented
 public @interface RespStatus {
 
+    //返回状态是
     HttpStatus[] is() default {HttpStatus.OK};
 
 }

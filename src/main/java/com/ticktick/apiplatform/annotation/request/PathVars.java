@@ -13,6 +13,7 @@ import java.lang.annotation.Target;
 @Documented
 public @interface PathVars {
 
+    //路径参数列表
     Property[] value() default {};
 
 }
